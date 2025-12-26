@@ -18,7 +18,7 @@ interface ProgrammeSectionProps {
     items: ProgrammeItem[];
 }
 
-export function ProgrammeSection({ title, items }: ProgrammeSectionProps) {
+export function ProgrammeScheduleSection({ title, items }: ProgrammeSectionProps) {
     return (
         <>
             <H2 className="text-secondary mb-4 md:px-4 px-0">{title}</H2>

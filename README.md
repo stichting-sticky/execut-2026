@@ -1,8 +1,8 @@
 # Execut Test - Next.js Website
 
-A modern Next.js website featuring speakers, programme information, and contact sections with 3D elements.
+A modern Next.js website featuring speakers, programme information, and contact sections.
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -10,6 +10,8 @@ A modern Next.js website featuring speakers, programme information, and contact 
 - pnpm package manager
 
 ### Installation
+
+#### Option 1: Using Command Line
 
 1. Clone the repository:
 ```bash
@@ -29,6 +31,25 @@ pnpm dev
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
+#### Option 2: Using GitHub Desktop
+
+1. Open GitHub Desktop
+2. Click "File" → "Clone repository"
+3. Enter the repository URL or select it from your GitHub repositories
+4. Choose a local path and click "Clone"
+5. Open the project folder in your terminal or VS Code
+6. Install dependencies:
+```bash
+pnpm install
+```
+
+7. Run the development server:
+```bash
+pnpm dev
+```
+
+8. Open [http://localhost:3000](http://localhost:3000) in your browser
+
 ### Available Commands
 
 - `pnpm dev` - Start development server
@@ -36,7 +57,7 @@ pnpm dev
 - `pnpm start` - Start production server
 - `pnpm lint` - Run ESLint
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 execut_test/
@@ -51,19 +72,28 @@ execut_test/
 │   │   └── speakers/          # Speakers page
 │   │
 │   ├── components/            # React components
-│   │   ├── section/          # Layout sections
+│   │   ├── section/          # Page sections (organized by page)
 │   │   │   ├── header.tsx    # Site header/navigation
 │   │   │   ├── footer.tsx    # Site footer
 │   │   │   ├── section.tsx   # Generic section wrapper
-│   │   │   └── home/         # Homepage-specific sections
+│   │   │   ├── home/         # Homepage sections
+│   │   │   │   ├── hero.tsx
+│   │   │   │   ├── about.tsx
+│   │   │   │   ├── speakers.tsx
+│   │   │   │   ├── stats.tsx
+│   │   │   │   └── acknowledgements.tsx
+│   │   │   ├── speakers/     # Speakers page sections
+│   │   │   │   ├── hero.tsx
+│   │   │   │   ├── navigation.tsx
+│   │   │   │   └── list.tsx
+│   │   │   ├── programme/    # Programme page sections
+│   │   │   │   ├── hero.tsx
+│   │   │   │   ├── schedule.tsx
+│   │   │   │   └── schedule-sections.tsx
+│   │   │   └── contact/      # Contact page sections
 │   │   │       ├── hero.tsx
-│   │   │       ├── about.tsx
-│   │   │       ├── speakers.tsx
-│   │   │       ├── stats.tsx
-│   │   │       └── acknowledgements.tsx
-│   │   │
-│   │   ├── three/            # Three.js/3D components
-│   │   │   └── logo-cube.tsx # 3D logo cube
+│   │   │       ├── info.tsx
+│   │   │       └── organiser.tsx
 │   │   │
 │   │   ├── ui/               # Reusable UI components
 │   │   │   ├── button.tsx
@@ -72,10 +102,8 @@ execut_test/
 │   │   │   ├── scroll-area.tsx
 │   │   │   └── typography.tsx
 │   │   │
-│   │   ├── speaker-card.tsx       # Speaker display card
-│   │   ├── speakers-carousel.tsx  # Carousel for speakers
-│   │   ├── programme-section.tsx  # Programme display
-│   │   └── scroll-to-top.tsx     # Scroll to top button
+│   │   ├── speaker-card.tsx  # Speaker display card
+│   │   └── scroll-to-top.tsx # Scroll to top button
 │   │
 │   ├── data/                  # Data files
 │   │   └── speakers.ts       # Speaker information & data
@@ -95,18 +123,17 @@ execut_test/
 └── package.json              # Dependencies & scripts
 ```
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Framework**: Next.js 16 (App Router)
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS
 - **UI Components**: Radix UI, shadcn/ui
-- **3D Graphics**: Three.js, React Three Fiber
 - **Icons**: Phosphor Icons, Lucide React
 - **Carousel**: Embla Carousel
 - **Package Manager**: pnpm
 
-## 📝 Working on This Project
+## Working on This Project
 
 ### Adding a New Page
 
@@ -132,12 +159,7 @@ execut_test/
 - Component styles: Use Tailwind CSS utility classes
 - Utility function: Use `cn()` from `src/lib/utils.ts` for conditional classes
 
-### 3D Components
-
-- 3D components using Three.js are in `src/components/three/`
-- Uses React Three Fiber for React integration
-
-## 🚢 Deployment
+## Deployment
 
 This project is ready to deploy on Vercel:
 
@@ -151,6 +173,6 @@ pnpm build
 pnpm start
 ```
 
-## 📄 License
+## License
 
 Private project - not for public distribution.
