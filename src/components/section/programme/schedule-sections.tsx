@@ -4,7 +4,7 @@ import { programmeSections } from "@/data/programme";
 
 export function ProgrammeScheduleSections() {
 	return (
-		<Section className="py-0">
+		<Section className="py-0 md:pb-20">
 			<div className="space-y-8 w-full">
 				{programmeSections.map((section) => (
 					<ProgrammeScheduleSection

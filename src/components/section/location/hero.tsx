@@ -8,9 +8,9 @@ export function LocationHeroSection() {
       <div className="relative z-10 pointer-events-auto">
         <Section>
           <div className="w-full max-w-xl">
-            <Title>This years Location</Title>
+            <Title>This years venue</Title>
             <Callout>
-              The location that brings exec(ut) {EVENT.year} to life, carefully chosen to create the perfect conference experience.
+              The venue that brings exec(ut) {EVENT.year} to life, carefully chosen to create the perfect conference experience.
             </Callout>
           </div>
         </Section>

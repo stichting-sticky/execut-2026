@@ -50,7 +50,7 @@ export function Header() {
             <Link href="/speakers">Speakers</Link>
           </Button>
           <Button variant="link" asChild className="text-foreground text-lg">
-            <Link href="/location">Location</Link>
+            <Link href="/location">Venue</Link>
           </Button>
           <Button variant="link" asChild className="text-foreground text-lg">
             <Link href="/programme">Programme</Link>
@@ -144,7 +144,7 @@ export function Header() {
               className="text-background font-mono text-2xl py-2 hover:opacity-70 transition-opacity"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Location
+              Venue
             </Link>
             <Link
               href="/programme"

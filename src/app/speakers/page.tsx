@@ -3,10 +3,12 @@ import { SpeakersNavigationSection } from "@/components/section/speakers/navigat
 import { SpeakersListSection } from "@/components/section/speakers/list";
 import { MASTER_TBA } from "@/config/tba";
 import { TBA } from "@/components/ui/tba";
+import { HashScroll } from "@/components/hash-scroll";
 
 export default function SpeakersPage() {
     return (
         <div className="min-h-screen bg-background">
+            <HashScroll />
             <SpeakersHeroSection />
             {MASTER_TBA ? (
                 <>

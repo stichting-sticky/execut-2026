@@ -5,7 +5,7 @@ import Link from "next/link";
 const venueSections = [
   { id: "about", label: "About" },
   { id: "impression", label: "Impression" },
-  { id: "map", label: "Map" },
+  { id: "map", label: "Venue Location" },
   { id: "route", label: "Travel Advice" },
 ] as const;
 

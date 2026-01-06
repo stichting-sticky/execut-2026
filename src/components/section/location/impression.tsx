@@ -15,12 +15,16 @@ import { cn } from "@/lib/utils";
 import { Title, Supertitle, Callout } from "@/components/ui/typography";
 
 const LOCATION_IMAGES = [
-	{ src: "/location/1.jpg", alt: "Venue impression 1" },
-	{ src: "/location/1.jpg", alt: "Venue impression 2" },
-	{ src: "/location/1.jpg", alt: "Venue impression 3" },
-    { src: "/location/1.jpg", alt: "Venue impression 4" },
-	{ src: "/location/1.jpg", alt: "Venue impression 5" },
-	{ src: "/location/1.jpg", alt: "Venue impression 6" },
+	{ src: "/location/2.jpg", alt: "Venue impression 2" },
+	{ src: "/location/3.jpg", alt: "Venue impression 3" },
+    { src: "/location/4.jpg", alt: "Venue impression 4" },
+	{ src: "/location/5.jpg", alt: "Venue impression 5" },
+	{ src: "/location/6.jpg", alt: "Venue impression 6" },
+	{ src: "/location/7.jpg", alt: "Venue impression 2" },
+	{ src: "/location/8.jpg", alt: "Venue impression 3" },
+    { src: "/location/9.jpg", alt: "Venue impression 4" },
+	{ src: "/location/10.jpg", alt: "Venue impression 5" },
+	{ src: "/location/11.jpg", alt: "Venue impression 6" },
 ];
 
 export function LocationImpressionSection() {
@@ -43,29 +47,29 @@ export function LocationImpressionSection() {
 	}, [api]);
 
 	return (
-		<div id="impression" className="scroll-mt-52">
+		<div id="impression" className="sscroll-mt-24 md:scroll-mt-40">
 			<section className="w-full relative">
 				<div className="relative pb-8">
-					<Carousel setApi={setApi} className="w-full flex flex-col" opts={{ loop: true, align: "start" }}>
-  <CarouselContent className="ml-0">
-    {LOCATION_IMAGES.map((img, index) => (
-      <CarouselItem
-        key={`${img.alt}-${index}`}
-        className="pl-0 basis-[70%] sm:basis-[45%] md:basis-[28%] lg:basis-[22%]"
-      >
-        <div className="relative aspect-square w-full">
-          <Image
-            src={img.src}
-            alt={img.alt}
-            fill
-            className="object-cover"
-            sizes="(min-width:1024px) 22vw, (min-width:768px) 28vw, (min-width:640px) 45vw, 70vw"
-            priority={index === 0}
-          />
-        </div>
-      </CarouselItem>
-    ))}
-  </CarouselContent>
+					<Carousel setApi={setApi} className="w-full flex flex-col" opts={{ loop: true, align: "center" }}>
+						<CarouselContent className="ml-0">
+							{LOCATION_IMAGES.map((img, index) => (
+							<CarouselItem
+								key={`${img.alt}-${index}`}
+								className="pl-0 basis-[70%] sm:basis-[45%] md:basis-[28%] lg:basis-[22%]"
+							>
+								<div className="relative aspect-square w-full">
+								<Image
+									src={img.src}
+									alt={img.alt}
+									fill
+									className="object-cover"
+									sizes="(min-width:1024px) 22vw, (min-width:768px) 28vw, (min-width:640px) 45vw, 70vw"
+									priority={index === 0}
+								/>
+								</div>
+							</CarouselItem>
+							))}
+						</CarouselContent>
 
 						{/* BOTTOM: text + controls (inside carousel, like speakers) */}
 						<Section className="!py-0">
@@ -88,7 +92,7 @@ export function LocationImpressionSection() {
 									<div className="order-2 md:order-1">
 										<Title>Impression</Title>
 										<Callout>
-											A quick look at the venue and its atmosphere.
+											Take a closer look at the venue and experience the atmosphere that defines exec(ut).
 										</Callout>
 									</div>
 								</div>

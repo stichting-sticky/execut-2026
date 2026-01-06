@@ -13,7 +13,7 @@ import {
 } from "@/components/ui/carousel";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { Callout, Supertitle, Title, H4 } from "@/components/ui/typography";
+import { Callout, Supertitle, Title, H3 } from "@/components/ui/typography";
 import { EVENT } from "@/data/event";
 
 // Replace with your location photo data
@@ -55,9 +55,16 @@ export function HomeLocationSection() {
               <div className="pointer-events-none absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-background/0 via-background/0 to-transparent" />
               <div className="pointer-events-none absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-background/0 via-background/0 to-transparent" />
 
-              <H4 className="mb-3 text-sm uppercase tracking-wide text-foreground/60 text-center">
-                Tivoli Vredenburg, Utrecht
-              </H4>
+              <div className="flex py-4 items-center justify-center text-center">
+                <div className="flex items-center justify-center text-center relative">
+                  <div>
+                    <H3 className="relative inline-block">
+                        {EVENT.venue.real}
+                        <span className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-50 h-[2px] bg-accent" />
+                    </H3>
+                  </div>
+                </div>
+              </div>
 
               <Carousel setApi={setApi} className="w-full" opts={{ loop: true, align: "center" }}>
                 <CarouselContent className="py-6">
@@ -104,14 +111,14 @@ export function HomeLocationSection() {
           {/* RIGHT: text (desktop), BELOW on mobile */}
           <div className="max-w-xl order-2 md:text-right md:ml-auto">
             <Supertitle>exec(ut)</Supertitle>
-            <Title>This years location.</Title>
+            <Title>This years venue.</Title>
             <Callout>
               A carefully chosen venue, perfect for exec(ut) {EVENT.year} in every detail.
             </Callout>
 
             <div className="mt-6">
               <Button variant="accent" asChild className="pointer-events-auto">
-                <Link href="/location">See location</Link>
+                <Link href="/location">See venue</Link>
               </Button>
             </div>
           </div>
