@@ -1,5 +1,6 @@
 import Section from "@/components/section/section";
 import { Callout, Title } from "@/components/ui/typography";
+import { EVENT } from "@/data/event";
 
 export function PartnersHeroSection() {
   return (
@@ -9,7 +10,7 @@ export function PartnersHeroSection() {
           <div className="w-full max-w-xl">
             <Title>Our Partners</Title>
             <Callout>
-              Meet our partners that help make exec(ut) 2026 possible. blablablablabla
+              The organizations that help make exec(ut) {EVENT.year} possible through their support and collaboration.
             </Callout>
           </div>
         </Section>

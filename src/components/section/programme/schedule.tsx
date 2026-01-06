@@ -36,7 +36,11 @@ export function ProgrammeScheduleSection({ title, items }: ProgrammeSectionProps
                         
                         {item.talk && (
                             <div className="mb-3 min-w-0">
-                                <div className="text-background/60 text-xs uppercase mb-1">Talk</div>
+                                {item.talk.speaker && (
+                                <div className="inline-flex items-center px-5 py-0.5 text-xs font-semibold uppercase tracking-wide bg-background/15 text-background mb-2">
+                                    Talk
+                                </div>
+                                )}
                                 {item.talk.speaker && (
                                     <div className="text-background/60 text-sm break-words">{item.talk.speaker}</div>
                                 )}
@@ -46,7 +50,9 @@ export function ProgrammeScheduleSection({ title, items }: ProgrammeSectionProps
                         
                         {item.workshop && (
                             <div className="min-w-0">
-                                <div className="text-background/60 text-xs uppercase mb-1">Workshop</div>
+                                <div className="inline-flex items-center px-5 py-0.5 text-xs font-semibold uppercase tracking-wide bg-background/15 text-background mb-2">
+                                    Workshop
+                                </div>
                                 {item.workshop.speaker && (
                                     <div className="text-background/60 text-sm break-words">{item.workshop.speaker}</div>
                                 )}
@@ -58,13 +64,18 @@ export function ProgrammeScheduleSection({ title, items }: ProgrammeSectionProps
             </div>
 
             {/* Desktop View - Table Layout */}
-            <div className="hidden md:block overflow-x-auto bg-secondary px-6 py-4 md:px-12 md:py-8 space-y-6 w-full font-mono">
-                <table className="w-full">
+            <div className="hidden md:block overflow-x-auto bg-secondary px-6 py-4 md:py-4 md:px-12 space-y-6 w-full font-mono">
+                <table className="w-full table-fixed">
+                    <colgroup>
+		                <col className="w-[18%]" />
+		                <col className="w-[41%]" />
+		                <col className="w-[41%]" />
+	                </colgroup>
                     <thead>
                         <tr className="border-b border-background">
-                            <th className="text-left text-background/80 text-xl font-light pb-4 pr-4 md:pr-8 ">TIME</th>
-                            <th className="text-left text-background/80 text-xl font-light pb-4 pr-4 md:pr-8 ">TALKS</th>
-                            <th className="text-left text-background/80 text-xl font-light pb-4">WORKSHOPS</th>
+                            <th className="text-left text-background/80 text-xl font-light py-4 pr-4 md:pr-8 ">TIME</th>
+                            <th className="text-left text-background/80 text-xl font-light py-4 pr-4 md:pr-8 ">TALKS</th>
+                            <th className="text-left text-background/80 text-xl font-light py-4">WORKSHOPS</th>
                         </tr>
                     </thead>
                     <tbody>

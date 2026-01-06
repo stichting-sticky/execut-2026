@@ -1,5 +1,6 @@
 import Section from "@/components/section/section";
 import { Callout, Title } from "@/components/ui/typography";
+import { EVENT } from "@/data/event";
 
 export function LocationHeroSection() {
   return (
@@ -7,9 +8,9 @@ export function LocationHeroSection() {
       <div className="relative z-10 pointer-events-auto">
         <Section>
           <div className="w-full max-w-xl">
-            <Title>Our Locations</Title>
+            <Title>This years Location</Title>
             <Callout>
-              Meet our partners that help make exec(ut) 2026 possible. blablablablabla
+              The location that brings exec(ut) {EVENT.year} to life, carefully chosen to create the perfect conference experience.
             </Callout>
           </div>
         </Section>

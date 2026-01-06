@@ -7,7 +7,7 @@ export function HomeProgrammeSection() {
   return (
     <Section
         className="w-full py-20 md:py-20 lg:py-24 px-8 relative"
-        wrapperClassName="max-w-7xl grid grid-cols-1 md:grid-cols-4 gap-8 items-center"
+        wrapperClassName="max-w-7xl grid grid-cols-1 md:grid-cols-3 gap-8 items-center"
     >
       <div className="flex flex-wrap items-baseline justify-center gap-3 max-w-[90vw] text-center">
         <H3 className="text-primary leading-none">26 March</H3>
@@ -26,11 +26,13 @@ export function HomeProgrammeSection() {
         <Paragraph className="text-tertiary leading-none">Included</Paragraph>
       </div>
 
+      {/*
       <div className="flex justify-center mt-8 md:mt-0">
         <Button variant="secondary" asChild className="pointer-events-auto">
           <Link href="/programme">See full programme</Link>
         </Button>
       </div>
+      */}
     </Section>
   );
 }

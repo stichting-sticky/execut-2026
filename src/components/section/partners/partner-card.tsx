@@ -18,7 +18,7 @@ export function PartnerCard({ partner}: PartnerCardProps) {
             id={`partner-${partner.id}`}
             className="scroll-mt-52"
         >
-            <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-12 items-start md:px-8">
+            <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-12 items-start md:px-8 md:py-8">
                 {/* Partner Image */}
                 <div className="relative aspect-square w-80 mx-auto md:mx-0">
                     <Image

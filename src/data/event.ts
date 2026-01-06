@@ -6,6 +6,7 @@ export const EVENT = {
   venue: {
     tba: "Utrecht, venue TBA",
     real: "Utrecht, Tivoli Vredenburg",
+    short: "Tivoli Vredenburg",
   },
 
   routes: {

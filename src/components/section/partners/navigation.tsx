@@ -24,8 +24,9 @@ export function PartnersNavigationSection() {
                 </div>
 
                 {/* Mobile placeholder bar */}
-                <div className="md:hidden h-12 bg-red-500 w-full" />
+                <div className="md:hidden flex items-center justify-center h-4">
                 </div>
+			</div>
         </Section>
     );
 }
