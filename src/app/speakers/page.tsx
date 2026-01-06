@@ -5,6 +5,10 @@ import { MASTER_TBA } from "@/config/tba";
 import { TBA } from "@/components/ui/tba";
 import { HashScroll } from "@/components/hash-scroll";
 
+export const metadata = {
+  title: "Speakers",
+};
+
 export default function SpeakersPage() {
     return (
         <div className="min-h-screen bg-background">

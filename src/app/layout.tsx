@@ -19,8 +19,10 @@ const spaceMono = Space_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "exec(ut) • Student IT Conference",
-  description: "Build by the exec(ut) team.",
+  title: {
+    default: "exec(ut) • Student IT Conference",
+    template: "%s • exec(ut)",
+  },
 };
 
 export default function RootLayout({
