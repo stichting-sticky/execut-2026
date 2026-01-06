@@ -12,10 +12,9 @@ export function Footer() {
         <div className="flex flex-col gap-12 md:flex-row items-center justify-between">
           {/* Left: Logo and Name */}
           <div className="flex items-center gap-4">
-            <div className="size-16 bg-foreground flex items-center justify-center">
-              <img src="/logo_face.png" alt="Execut Logo" className="size-16" />
+            <div className="flex items-center justify-center">
+              <img src="/logo_large_mono_black.png" alt="Execut Logo" className="size-16 w-auto" />
             </div>
-            <p className="font-mono text-2xl hidden md:block">exec(ut)</p>
           </div>
 
           {/* Right: Social Media */}

@@ -4,6 +4,8 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ListIcon, XIcon, HouseIcon, UsersThreeIcon, EnvelopeIcon, TicketIcon } from "@phosphor-icons/react";
 import { useState, useEffect } from "react";
+import { MASTER_TBA } from "@/config/tba";
+import { EVENT } from "@/data/event";
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -28,33 +30,50 @@ export function Header() {
       <header className="w-full hidden md:flex items-center justify-between bg-background sticky top-0 z-50">
         {/* Logo and Name */}
         <div className="flex items-center gap-4 bg-secondary px-4 md:px-16 py-8">
-          <img src="/logo_small.png" alt="Small Execut Logo" className="size-10" />
-          <p className="text-background font-mono text-2xl">exec(ut)</p>
+          <img src="/logo_large_color_white.png" alt="Large Execut Logo" className="h-12 w-auto max-w-[260px] object-contain" />
 
           <div className="font-mono text-background ml-4 md:ml-12">
-              <p>25 March 2025</p>
-              <p className="font-bold">{">"} Tivoli Vredenburg, Utrecht</p>
+              <p>{EVENT.date}</p>
+              <p className="font-bold">{">"} {MASTER_TBA ? EVENT.venue.tba : EVENT.venue.real}</p>
           </div>
         </div>
 
         {/* Navigation */}
-        <nav className="flex items-center gap-1">
-          <Button variant="link" asChild>
+        <nav className="flex items-center gap-1 text-base">
+          <Button variant="link" asChild className="text-foreground text-lg">
             <Link href="/">Home</Link>
           </Button>
-          <Button variant="link" asChild>
+          <Button variant="link" asChild className="text-foreground text-lg">
+            <Link href="/partners">Partners</Link>
+          </Button>
+          <Button variant="link" asChild className="text-foreground text-lg">
             <Link href="/speakers">Speakers</Link>
           </Button>
-          <Button variant="link" asChild>
+          <Button variant="link" asChild className="text-foreground text-lg">
+            <Link href="/location">Location</Link>
+          </Button>
+          <Button variant="link" asChild className="text-foreground text-lg">
             <Link href="/programme">Programme</Link>
           </Button>
         </nav>
 
         {/* Action Buttons */}
         <div className="flex items-center gap-4 px-4 md:px-16 py-8">
-          <Button variant="secondary" asChild>
-            <Link href="/tickets">Get your Tickets</Link>
-          </Button>
+            {MASTER_TBA ? (
+              <Button
+                variant="secondary"
+                disabled
+                className="opacity-60 cursor-not-allowed"
+              >
+                {EVENT.tickets.labelSoon}
+              </Button>
+            ) : (
+              <Button variant="secondary" asChild>
+                <Link href={EVENT.routes.tickets}>
+                  {EVENT.tickets.labelAvailable}
+                </Link>
+              </Button>
+            )}
           <Button variant="outline" asChild>
             <Link href="/contact">Contact</Link>
           </Button>
@@ -65,8 +84,11 @@ export function Header() {
       <header className="w-full flex md:hidden items-center justify-between bg-secondary px-6 py-4 sticky top-0 z-50">
         {/* Logo and Name */}
         <Link href="/" className="flex items-center gap-3">
-          <img src="/logo_small.png" alt="Small Execut Logo" className="size-8" />
-          <p className="text-background font-mono text-xl">exec(ut)</p>
+          <img
+            src="/logo_large_color_white.png"
+            alt="Execut Logo"
+            className="h-8 w-auto object-contain"
+          />
         </Link>
 
         {/* Hamburger Menu Button */}
@@ -90,8 +112,8 @@ export function Header() {
         <div className="flex-1 flex flex-col px-6 py-8">
           {/* Date and Location */}
           <div className="font-mono text-background mb-8 pb-6 border-b border-background/20">
-            <p>25 March 2025</p>
-            <p className="font-bold">{">"} Tivoli Vredenburg, Utrecht</p>
+            <p>{EVENT.date}</p>
+            <p className="font-bold">{">"} {MASTER_TBA ? EVENT.venue.tba : EVENT.venue.real}</p>
           </div>
 
           {/* Navigation Links */}
@@ -104,11 +126,25 @@ export function Header() {
               Home
             </Link>
             <Link
+              href="/partners"
+              className="text-background font-mono text-2xl py-2 hover:opacity-70 transition-opacity"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Partners
+            </Link>
+            <Link
               href="/speakers"
               className="text-background font-mono text-2xl py-2 hover:opacity-70 transition-opacity"
               onClick={() => setMobileMenuOpen(false)}
             >
               Speakers
+            </Link>
+            <Link
+              href="/location"
+              className="text-background font-mono text-2xl py-2 hover:opacity-70 transition-opacity"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Location
             </Link>
             <Link
               href="/programme"

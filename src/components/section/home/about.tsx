@@ -1,6 +1,13 @@
+"use client";
+
 import Link from "next/link";
 import { H2, H4, Callout } from "@/components/ui/typography";
 import Section from "../section";
+
+import { LinkedinLogoIcon } from "@phosphor-icons/react";
+const linkedin = "https://linkedin.com/in/test";
+
+import { committee, ROLE_ORDER } from "@/data/committee";
 
 export function HomeAboutSection() {
     return (
@@ -18,44 +25,29 @@ export function HomeAboutSection() {
                     </Callout>
                 </div>
 
-                {/* Right: Names in 2 columns */}
                 <div className="flex-3 grid md:grid-cols-2 gap-8 md:gap-6 max-w-[90vw]">
-                    <div>
-                        <H4>Sem van Nieuwenhuizen</H4>
-                        <Callout className="!mt-0 !mb-0">chair</Callout>
+                {committee
+                    .slice()
+                    .sort((a, b) => ROLE_ORDER.indexOf(a.role) - ROLE_ORDER.indexOf(b.role))
+                    .map((member) => (
+                    <div key={`${member.role}-${member.name}`}>
+                        <div className="flex items-center gap-2">
+                        {member.linkedin && member.linkedin.trim() !== "" && (
+                            <Link
+                            href={member.linkedin}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={`${member.name} LinkedIn`}
+                            className="text-muted-foreground hover:text-primary transition-colors"
+                            >
+                            <LinkedinLogoIcon size={32} weight="fill" />
+                            </Link>
+                        )}
+                        <H4>{member.name}</H4>
+                        </div>
+                        <Callout className="!mt-0 !mb-0">{member.role}</Callout>
                     </div>
-                    <div>
-                        <H4>Marcel van Laar</H4>
-                        <Callout className="!mt-0 !mb-0">treasurer</Callout>
-                    </div>
-                    <div>
-                        <H4>Thijs Olijerhoek</H4>
-                        <Callout className="!mt-0 !mb-0">acquisition</Callout>
-                    </div>
-                    <div>
-                        <H4>Willem Haans</H4>
-                        <Callout className="!mt-0 !mb-0">acquisition</Callout>
-                    </div>
-                    <div>
-                        <H4>Robert Karzijn</H4>
-                        <Callout className="!mt-0 !mb-0">speakers</Callout>
-                    </div>
-                    <div>
-                        <H4>Joshua Oudshorn</H4>
-                        <Callout className="!mt-0 !mb-0">speakers</Callout>
-                    </div>
-                    <div>
-                        <H4>Tieeny Chao</H4>
-                        <Callout className="!mt-0 !mb-0">location</Callout>
-                    </div>
-                    <div>
-                        <H4>Thom Bongaards</H4>
-                        <Callout className="!mt-0 !mb-0">promotion</Callout>
-                    </div>
-                    <div>
-                        <H4>Joep Swinkels</H4>
-                        <Callout className="!mt-0 !mb-0">board</Callout>
-                    </div>
+                    ))}
                 </div>
             </div>
         </Section>

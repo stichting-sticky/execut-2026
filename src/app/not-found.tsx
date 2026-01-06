@@ -3,12 +3,12 @@ import Section from "@/components/section/section";
 
 export default function NotFound() {
     return (
-        <Section className="text-left py-32 bg-secondary">
+        <Section className="text-left py-32 bg-primary">
             <div className="flex flex-col items-start">
                 {/* 404 with logo */}
                 <div className="flex items-center gap-4 mb-12">
-                    <div className="size-20 bg-background flex items-center justify-center">
-                        <img src="/logo_face.png" alt="Execut Logo" className="size-20 invert" />
+                    <div className="size-20 flex items-center justify-center">
+                        <img src="/logo_face.png" alt="Execut Logo" className="size-20" />
                     </div>
                     <H3 className="text-8xl text-background">404</H3>
                 </div>

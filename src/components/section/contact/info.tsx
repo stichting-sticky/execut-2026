@@ -1,6 +1,7 @@
 import Section from "@/components/section/section";
 import { H3, Paragraph } from "@/components/ui/typography";
 import { EnvelopeSimpleIcon, MapPinIcon, PhoneIcon } from "@phosphor-icons/react/dist/ssr";
+import { EVENT } from "@/data/event"
 
 export function ContactInfoSection() {
     return (
@@ -19,7 +20,7 @@ export function ContactInfoSection() {
                                     <Paragraph className="font-semibold mt-0!">Email</Paragraph>
                                     <Paragraph className="mt-1!">
                                         <a href="mailto:info@execut.nl" className="hover:underline">
-                                            info@execut.nl
+                                            conference@execut.nl
                                         </a>
                                     </Paragraph>
                                 </div>
@@ -32,9 +33,9 @@ export function ContactInfoSection() {
                                 <div>
                                     <Paragraph className="font-semibold mt-0!">Location</Paragraph>
                                     <Paragraph className="mt-1!">
-                                        Tivoli Vredenburg<br />
-                                        Vredenburgkade 11<br />
-                                        3511 WC Utrecht, Netherlands
+                                        Stichting Sticky<br />
+                                        Princetonplein 5<br />
+                                        3584 CC Utrecht, The Netherlands
                                     </Paragraph>
                                 </div>
                             </div>
@@ -46,7 +47,7 @@ export function ContactInfoSection() {
                                 <div>
                                     <Paragraph className="font-semibold mt-0!">Event Date</Paragraph>
                                     <Paragraph className="mt-1!">
-                                        March 25, 2025
+                                        {EVENT.date}
                                     </Paragraph>
                                 </div>
                             </div>
@@ -64,9 +65,9 @@ export function ContactInfoSection() {
                     </div>
 
                     <div>
-                        <H3 className="mb-4">Sponsorship Opportunities</H3>
+                        <H3 className="mb-4">Partnership Opportunities</H3>
                         <Paragraph>
-                            Help us make exec(ut) an even better experience for students. Contact us to learn more about sponsorship packages and partnership opportunities.
+                            Help us make exec(ut) an even better experience for students. Contact us to learn more about partnership packages and opportunities.
                         </Paragraph>
                     </div>
 

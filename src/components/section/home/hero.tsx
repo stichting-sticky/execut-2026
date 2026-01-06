@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Callout, Paragraph, Supertitle, Title } from "@/components/ui/typography";
 import Link from "next/link";
+import { MASTER_TBA } from "@/config/tba";
+import { EVENT } from "@/data/event";
 
 export function HomeHeroSection() {
     return (
@@ -12,9 +14,21 @@ export function HomeHeroSection() {
                     <Callout>
                         For those willing to look further than their own classroom. We want to work together, inspire each other, and commit ourselves to a better tomorrow. Besides a range of interesting talks exec(ut) provides great networking opportunities to those attending.
                     </Callout>
-                    <Button variant="secondary" className="mt-4 pointer-events-auto" asChild>
-                        <Link href="/tickets">Get your Tickets</Link>
-                    </Button>
+                    {MASTER_TBA ? (
+                        <Button
+                            variant="secondary"
+                            disabled
+                            className="opacity-60 cursor-not-allowed pointer-events-auto"
+                        >
+                            {EVENT.tickets.labelSoon}
+                        </Button>
+                    ) : (
+                        <Button variant="secondary" asChild className="pointer-events-auto">
+                            <Link href={EVENT.routes.tickets}>
+                            {EVENT.tickets.labelAvailable}
+                            </Link>
+                        </Button>
+                    )}
                 </div>
             </div>
             <div className="w-full left-0 absolute min-h-100 inset-0 hidden md:block">

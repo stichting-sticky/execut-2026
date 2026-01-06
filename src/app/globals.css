@@ -10,6 +10,7 @@
   --color-primary-foreground: var(--primary-foreground);
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary-light: var(--secondary-light);
   --color-tertiary: var(--tertiary);
   --color-tertiary-foreground: var(--tertiary-foreground);
   --color-accent: var(--accent);
@@ -46,6 +47,7 @@
   --primary-foreground: #fffaf8;
   --secondary: #44a095;
   --secondary-foreground: #fffaf8;
+  --secondary-light: #f5f8f5;
   --tertiary: #b08dc0;
   --tertiary-foreground: #fffaf8;
   --muted: #e1dad6;

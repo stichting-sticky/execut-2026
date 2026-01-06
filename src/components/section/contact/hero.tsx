@@ -6,7 +6,7 @@ export function ContactHeroSection() {
         <Section className="py-20">
             <Title>Get in Touch</Title>
             <Callout className="max-w-2xl">
-                Have questions about exec(ut)? Want to become a sponsor or speaker? We'd love to hear from you.
+                Have questions about exec(ut)? Want to become a partner or speaker? We'd love to hear from you.
             </Callout>
         </Section>
     );

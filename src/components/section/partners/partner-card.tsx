@@ -4,51 +4,46 @@ import Image from "next/image";
 import Link from "next/link";
 import { H2, H3, Paragraph } from "@/components/ui/typography";
 import { Button } from "@/components/ui/button";
-import type { Speaker } from "@/data/speakers";
+import type { Partner } from "@/data/partners";
 import { GlobeIcon, LinkedinLogoIcon } from "@phosphor-icons/react";
 
-interface LogoCube {
-    size: number;
-    position: string; 
-    color: string; 
+
+interface PartnerCardProps {
+    partner: Partner;
 }
 
-interface SpeakerCardProps {
-    speaker: Speaker;
-    logoCubes?: LogoCube[];
-}
-
-export function SpeakerCard({ speaker, logoCubes = [] }: SpeakerCardProps) {
+export function PartnerCard({ partner}: PartnerCardProps) {
     return (
         <section
-            id={`speaker-${speaker.id}`}
+            id={`partner-${partner.id}`}
             className="scroll-mt-52"
         >
             <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-12 items-start md:px-8">
-                {/* Speaker Image */}
+                {/* Partner Image */}
                 <div className="relative aspect-square w-80 mx-auto md:mx-0">
                     <Image
-                        src={speaker.image}
-                        alt={speaker.name}
+                        src={partner.image}
+                        alt={partner.name}
                         fill
                         className="object-cover"
                     />
                 </div>
-                {/* Speaker Info */}
+
+                {/* Partner Info */}
                 <div className="space-y-6">
                     <div>
-                        <H2>{speaker.name}</H2>
-                        <H3>{speaker.specialization}</H3>
+                        <H2>{partner.name}</H2>
+                        <H3>{partner.tagline}</H3>
                     </div>
 
-                    <Paragraph className="text-lg leading-relaxed whitespace-pre-line">{speaker.description}</Paragraph>
+                    <Paragraph className="text-lg leading-relaxed">{partner.description}</Paragraph>
 
                     {/* Links */}
                     <div className="flex gap-4 pt-4">
-                        {speaker.linkedin && (
+                        {partner.linkedin && (
                             <Button variant="outline" asChild>
                                 <Link
-                                    href={speaker.linkedin}
+                                    href={partner.linkedin}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="flex items-center gap-2"
@@ -58,10 +53,10 @@ export function SpeakerCard({ speaker, logoCubes = [] }: SpeakerCardProps) {
                                 </Link>
                             </Button>
                         )}
-                        {speaker.website && (
+                        {partner.website && (
                             <Button variant="outline" asChild>
                                 <Link
-                                    href={speaker.website}
+                                    href={partner.website}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="flex items-center gap-2"
