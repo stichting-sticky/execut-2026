@@ -183,9 +183,7 @@ export function Header() {
               className="w-full bg-background text-secondary hover:bg-background/90 text-xl py-6"
               asChild
             >
-              <Link href="/tickets" onClick={() => setMobileMenuOpen(false)}>
-                Get your Tickets
-              </Link>
+              <Link href={EVENT.tickets.url} target="_blank" rel="noopener noreferrer">{EVENT.tickets.labelAvailable}</Link>
             </Button>
           </div>
         </div>
