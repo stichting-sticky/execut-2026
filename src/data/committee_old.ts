@@ -62,7 +62,7 @@ export const oldCommittee: OldCommitteeMember[] = [
     {
         year: 2025,
         name: "Maureen van Veen",
-        role: "board",
+        role: "internal affairs",
         linkedin: "https://www.linkedin.com/in/maureen-van-veen-9a3730222/",
     },
     /*2024*/
@@ -105,7 +105,7 @@ export const oldCommittee: OldCommitteeMember[] = [
     {
         year: 2024,
         name: "Lisanne Koetsier",
-        role: "board",
+        role: "internal affairs",
         linkedin: "https://www.linkedin.com/in/lisanne-koetsier/",
     },
     /* 2023 */
@@ -148,7 +148,7 @@ export const oldCommittee: OldCommitteeMember[] = [
 	{
 		year: 2023,
 		name: "Thirza Hiwat",
-		role: "board",
+		role: "internal affairs",
 		linkedin: "https://www.linkedin.com/in/thiwat/",
 	},
 ];
