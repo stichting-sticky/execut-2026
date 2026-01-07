@@ -10,7 +10,7 @@ export const EVENT = {
   },
 
   tickets: {
-    url: "https://pretix.eu/demo/event/",
+    url: "https://tickets.execut.nl/2026/",
 
     labelAvailable: "Get your Tickets",
     labelSoon: "Tickets available soon",

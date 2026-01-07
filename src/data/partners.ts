@@ -68,7 +68,7 @@ export const partners: Partner[] = [
     name: "Capgemini",
     tagline: "Get the future you want.",
     image: "/partners/capgemini.png",
-    description: "Capgemini is a global leader in consulting, technology services, and digital transformation. They help organizations solve complex business challenges and accelerate innovation through expertise in cloud, data & AI, enterprise technology, and engineering. With a diverse global team, Capgemini enables clients to leverage technology to define and realize the future they want while creating sustainable impact.",
+    description: "We are a diverse global collective of more than 370.000 strategic and technological experts who are passionate about finding new ways technology can help our clients, our people and our communities get the future they want. With more than 50 years of industry leadership, we help today’s leading companies transform and manage their businesses through technology to shape the future of their industries and drive tangible business impact. We are the strategic technology partner for the leaders of today and tomorrow and are supporting our clients at every step of their transformation. We are driven by one shared purpose: unleashing human energy through technology for an inclusive and sustainable future. We are working toward net-zero emissions by taking responsible and sustainable action by focusing on tech-driven innovation. We have been recognized as one of the World’s Most Ethical Companies by Ethisphere 10 years in a row.",
     tier: "silver",
     linkedin: "",
     website: "https://capgemini.com/",
