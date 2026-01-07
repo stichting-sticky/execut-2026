@@ -83,7 +83,7 @@ export function Header() {
             </Button>
           ) : (
             <Button variant="secondary" asChild className="text-sm lg:text-base hidden xl:block">
-              <Link href={EVENT.tickets.url} target="_blank" rel="noopener noreferrer"></Link>
+              <Link href={EVENT.tickets.url} target="_blank" rel="noopener noreferrer">{EVENT.tickets.labelAvailable}</Link>
             </Button>
           )}
 

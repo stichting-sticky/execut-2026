@@ -24,7 +24,7 @@ export function HomeHeroSection() {
                         </Button>
                     ) : (
                         <Button variant="secondary" asChild className="pointer-events-auto">
-                            <Link href={EVENT.tickets.url} target="_blank" rel="noopener noreferrer"></Link>
+                            <Link href={EVENT.tickets.url} target="_blank" rel="noopener noreferrer">{EVENT.tickets.labelAvailable}</Link>
                         </Button>
                     )}
                 </div>
