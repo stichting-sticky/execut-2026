@@ -11,7 +11,7 @@ const venueSections = [
 
 export function LocationNavigationSection() {
   return (
-    <Section className="sticky md:top-28 top-20 z-40 bg-accent !py-0">
+    <Section className="sticky top-[var(--header-height)] z-10 md:z-40 bg-accent !py-0">
       <div>
         {/* Desktop navigation */}
         <div className="hidden md:flex flex-wrap gap-4 justify-start py-4 max-w-[90vw]">

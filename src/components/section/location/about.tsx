@@ -5,9 +5,9 @@ import { MASTER_TBA } from "@/config/tba";
 
 export function LocationAboutSection() {
   return (
-    <Section className="scroll-mt-24 md:scroll-mt-40" id="about">
+    <Section className="" id="about">
       {/* 50/50 block */}
-      <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-stretch">
+      <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 place-items-center md:place-items-stretch">
         {/* Left: card MUST fill its 50% column on desktop */}
         <div className="flex items-stretch justify-center md:justify-stretch">
           <div className="w-full max-w-md md:max-w-none">
@@ -22,7 +22,7 @@ export function LocationAboutSection() {
 
         {/* Right: text fills its 50% column */}
         <div className="flex items-center">
-          <div className="w-full max-w-xl md:max-w-none text-center md:text-left">
+          <div className="w-full max-w-xl md:max-w-none text-left">
             <Paragraph className="text-lg">
               Tivoli Vredenburg sits in the heart of Utrecht and is one of the city’s most iconic cultural venues.
               Its mix of modern architecture and flexible spaces makes it an ideal setting for talks, workshops,

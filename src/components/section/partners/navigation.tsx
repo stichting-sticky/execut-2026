@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export function PartnersNavigationSection() {
     return (
-        <Section className="sticky md:top-28 top-20 z-10 bg-primary !py-0">
+        <Section className="sticky top-[var(--header-height)] z-10 bg-primary !py-0">
             <div>
                 {/* Desktop navigation */}
                 <div className="hidden md:flex flex-wrap gap-4 justify-start py-4">
@@ -24,8 +24,7 @@ export function PartnersNavigationSection() {
                 </div>
 
                 {/* Mobile placeholder bar */}
-                <div className="md:hidden flex items-center justify-center h-4">
-                </div>
+                <div className="md:hidden flex items-center justify-center h-4" />
 			</div>
         </Section>
     );

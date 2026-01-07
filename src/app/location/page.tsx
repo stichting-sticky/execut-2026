@@ -32,7 +32,6 @@ export default function LocationPage() {
 			) : (
 				<>
 					<LocationNavigationSection />
-
 					<LocationAboutSection />
 					<LocationImpressionSection />
 					<LocationMapSection />

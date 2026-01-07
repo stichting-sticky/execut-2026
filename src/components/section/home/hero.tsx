@@ -29,7 +29,7 @@ export function HomeHeroSection() {
                     )}
                 </div>
             </div>
-            <div className="w-full left-0 absolute min-h-100 inset-0 hidden md:block z-0">
+            <div className="w-full left-0 absolute min-h-100 inset-0 hidden md:block z-0 pointer-events-none xl:pointer-events-auto">
                 <iframe src='https://my.spline.design/glasscube-CmxGfmC2hMcKu65tdK70LS5N/' width='100%' height='700px'></iframe>
             </div>
         </section>

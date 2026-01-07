@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ListIcon, XIcon, HouseIcon, UsersThreeIcon, EnvelopeIcon, TicketIcon } from "@phosphor-icons/react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useLayoutEffect } from "react";
 import { MASTER_TBA } from "@/config/tba";
 import { EVENT } from "@/data/event";
 
@@ -24,10 +24,58 @@ export function Header() {
     };
   }, [mobileMenuOpen]);
 
+useLayoutEffect(() => {
+  const desktop = document.getElementById("site-header-desktop") as HTMLElement | null;
+  const mobile = document.getElementById("site-header-mobile") as HTMLElement | null;
+
+  const setVar = (px: number) => {
+    document.documentElement.style.setProperty("--header-height", `${Math.ceil(px)}px`);
+  };
+
+  const getVisibleHeader = () => {
+    const isVisible = (el: HTMLElement | null) =>
+      !!el && window.getComputedStyle(el).display !== "none";
+    if (isVisible(mobile)) return mobile;
+    if (isVisible(desktop)) return desktop;
+    return null;
+  };
+
+  const update = () => {
+    const header = getVisibleHeader();
+    if (!header) return;
+    setVar(header.getBoundingClientRect().height);
+  };
+
+  // Initial set: do it now, then again on next frame (layout/fonts)
+  setVar(0);
+  update();
+  requestAnimationFrame(update);
+
+  const ro = new ResizeObserver(() => {
+    update();
+    requestAnimationFrame(update);
+  });
+
+  if (desktop) ro.observe(desktop);
+  if (mobile) ro.observe(mobile);
+
+  window.addEventListener("resize", update);
+  window.addEventListener("orientationchange", update);
+
+  return () => {
+    ro.disconnect();
+    window.removeEventListener("resize", update);
+    window.removeEventListener("orientationchange", update);
+  };
+}, []);
+
   return (
     <>
       {/* Desktop Header */}
-      <header className="w-full hidden md:flex items-center justify-between bg-background sticky top-0 z-50">
+      <header
+        id="site-header-desktop"
+        className="w-full hidden md:flex items-center justify-between bg-background sticky top-0 z-50"
+      >
         {/* Logo and Name */}
 
           
@@ -95,7 +143,7 @@ export function Header() {
 
 
       {/* Mobile Header */}
-      <header className="w-full flex md:hidden items-center justify-between bg-secondary px-6 py-4 sticky top-0 z-50">
+      <header id="site-header-mobile" className="w-full flex md:hidden items-center justify-between bg-secondary px-6 py-4 sticky top-0 z-50">
         {/* Logo and Name */}
         <Link href="/" className="flex items-center gap-3">
           <img
