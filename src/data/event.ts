@@ -9,11 +9,9 @@ export const EVENT = {
     short: "Tivoli Vredenburg",
   },
 
-  routes: {
-    tickets: "/tickets",
-  },
-
   tickets: {
+    url: "https://pretix.eu/demo/event/",
+
     labelAvailable: "Get your Tickets",
     labelSoon: "Tickets available soon",
   },

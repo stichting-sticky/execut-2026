@@ -29,56 +29,70 @@ export function Header() {
       {/* Desktop Header */}
       <header className="w-full hidden md:flex items-center justify-between bg-background sticky top-0 z-50">
         {/* Logo and Name */}
-        <div className="flex items-center gap-4 bg-secondary px-4 md:px-16 py-8">
-          <img src="/logo_large_color_white.png" alt="Large Execut Logo" className="h-12 w-auto max-w-[260px] object-contain" />
 
-          <div className="font-mono text-background ml-4 md:ml-12">
-              <p>{EVENT.date}</p>
-              <p className="font-bold">{">"} {MASTER_TBA ? EVENT.venue.tba : EVENT.venue.real}</p>
+          
+
+          <div className="flex items-center gap-4 bg-secondary px-4 md:px-16 py-8">
+          <img
+            src="/logo_large_color_white.png"
+            alt="Large Execut Logo"
+            className="
+              h-8
+              md:h-9
+              lg:h-12
+              w-auto
+              max-w-[180px]
+              md:max-w-[200px]
+              lg:max-w-[260px]
+              object-contain
+            "
+          />
+
+          <div className="font-mono text-background ml-2 lg:ml-8 hidden 2xl:block">
+            <p className="text-sm lg:text-base">{EVENT.date}</p>
+            <p className="font-bold text-sm lg:text-base">
+              {">"} {MASTER_TBA ? EVENT.venue.tba : EVENT.venue.real}
+            </p>
           </div>
         </div>
 
         {/* Navigation */}
         <nav className="flex items-center gap-1 text-base">
-          <Button variant="link" asChild className="text-foreground text-lg">
+          <Button variant="link" asChild className="text-foreground text-base lg:text-lg px-2 lg:px-3 ml-6 lg:ml-12">
             <Link href="/">Home</Link>
           </Button>
-          <Button variant="link" asChild className="text-foreground text-lg">
+          <Button variant="link" asChild className="text-foreground text-base lg:text-lg px-2 lg:px-3">
             <Link href="/partners">Partners</Link>
           </Button>
-          <Button variant="link" asChild className="text-foreground text-lg">
+          <Button variant="link" asChild className="text-foreground text-base lg:text-lg px-2 lg:px-3">
             <Link href="/speakers">Speakers</Link>
           </Button>
-          <Button variant="link" asChild className="text-foreground text-lg">
+          <Button variant="link" asChild className="text-foreground text-base lg:text-lg px-2 lg:px-3">
             <Link href="/location">Venue</Link>
           </Button>
-          <Button variant="link" asChild className="text-foreground text-lg">
+          <Button variant="link" asChild className="text-foreground text-base lg:text-lg px-2 lg:px-3">
             <Link href="/programme">Programme</Link>
           </Button>
         </nav>
 
         {/* Action Buttons */}
-        <div className="flex items-center gap-4 px-4 md:px-16 py-8">
-            {MASTER_TBA ? (
-              <Button
-                variant="secondary"
-                disabled
-                className="opacity-60 cursor-not-allowed"
-              >
-                {EVENT.tickets.labelSoon}
-              </Button>
-            ) : (
-              <Button variant="secondary" asChild>
-                <Link href={EVENT.routes.tickets}>
-                  {EVENT.tickets.labelAvailable}
-                </Link>
-              </Button>
-            )}
-          <Button variant="outline" asChild>
+        <div className="flex items-center gap-3 px-6 lg:px-16 py-4 lg:py-8 shrink-0">
+          {MASTER_TBA ? (
+            <Button variant="secondary" disabled className="opacity-60 cursor-not-allowed text-sm lg:text-base">
+              {EVENT.tickets.labelSoon}
+            </Button>
+          ) : (
+            <Button variant="secondary" asChild className="text-sm lg:text-base hidden xl:block">
+              <Link href={EVENT.tickets.url} target="_blank" rel="noopener noreferrer">{EVENT.tickets.labelAvailable}</Link>
+            </Button>
+          )}
+
+          <Button variant="outline" asChild className="text-sm lg:text-base">
             <Link href="/contact">Contact</Link>
           </Button>
         </div>
       </header>
+
 
       {/* Mobile Header */}
       <header className="w-full flex md:hidden items-center justify-between bg-secondary px-6 py-4 sticky top-0 z-50">

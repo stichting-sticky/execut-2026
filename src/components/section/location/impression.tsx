@@ -114,30 +114,34 @@ export function LocationImpressionSection() {
               {/* Desktop overlay arrows – constrained */}
               <div className="hidden md:block absolute inset-0 pointer-events-none z-30">
                             <div className="max-w-7xl mx-auto px-6 py-12 md:px-0 h-full flex justify-between items-stretch">
-                              <CarouselPrevious
-                                className={cn(
-                                  "pointer-events-auto cursor-pointer",
-                                  "h-full w-14", 
-                                  "bg-accent",
-                                  "border-none",
-                                  "rounded-none",
-                                  "drop-shadow-lg",
-                                  "text-white",
-                                  "hover:bg-accent/90",
-                                )}
-                              />
-                              <CarouselNext
-                                className={cn(
-                                  "pointer-events-auto cursor-pointer",
-                                  "h-full w-14", 
-                                  "bg-accent",
-                                  "border-none",
-                                  "rounded-none",
-                                  "drop-shadow-lg",
-                                  "text-white",
-                                  "hover:bg-accent/90",
-                                )}
-                              />
+                                <CarouselPrevious
+                                  className={cn(
+                                    "pointer-events-auto cursor-pointer",
+                                    "static left-auto right-auto top-auto translate-y-0",
+                                    "h-full w-14",
+                                    "bg-white/50 backdrop-blur-md",
+                                    "border-none",
+                                    "rounded-none",
+                                    "text-white",
+                                    "shadow-lg",
+                                    "hover:bg-white/30",
+                                    "transition-colors"
+                                  )}
+                                />
+                                <CarouselNext
+                                  className={cn(
+                                    "pointer-events-auto cursor-pointer",
+                                    "static left-auto right-auto top-auto translate-y-0",
+                                    "h-full w-14",
+                                    "bg-white/50 backdrop-blur-md",
+                                    "border-none",
+                                    "rounded-none",
+                                    "text-white",
+                                    "shadow-lg",
+                                    "hover:bg-white/30",
+                                    "transition-colors"
+                                  )}
+                                />
                             </div>
                           </div>
             </div>

@@ -1,5 +1,10 @@
 import { H2, H3, Paragraph } from "@/components/ui/typography";
 
+const PROGRAMME_TBA = true;
+
+
+
+
 interface ProgrammeItem {
     time: string;
     duration?: string;
@@ -19,6 +24,19 @@ interface ProgrammeSectionProps {
 }
 
 export function ProgrammeScheduleSection({ title, items }: ProgrammeSectionProps) {
+    if (PROGRAMME_TBA) {
+        return (
+            <>
+                <div className="bg-secondary px-6 py-12 mb-6 md:px-12 text-center font-mono">
+                    <H3 className="text-background mb-2">Programme TBA</H3>
+                    <Paragraph className="text-background/70">
+                        The full programme will be announced soon.
+                    </Paragraph>
+                </div>
+            </>
+        );
+    }
+
     return (
         <>
             <H2 className="text-secondary mb-4 md:px-4 px-0">{title}</H2>

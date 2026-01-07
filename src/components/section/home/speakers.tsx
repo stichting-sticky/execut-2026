@@ -134,23 +134,36 @@ export function HomeSpeakersSection() {
                   wrapperClassName="h-full max-w-7xl px-6 md:px-0"
                 >
                   <div className="h-full w-full flex justify-between items-stretch">
-                    <CarouselPrevious
-                      className={cn(
-                        "pointer-events-auto cursor-pointer",
-                        "static left-auto right-auto top-auto translate-y-0",
-                        "h-full w-14",
-                        "bg-tertiary border-none rounded-none drop-shadow-lg text-white hover:bg-tertiary/90"
-                      )}
-                    />
-                    <CarouselNext
-                      className={cn(
-                        "pointer-events-auto cursor-pointer",
-                        "static left-auto right-auto top-auto translate-y-0",
-                        "h-full w-14",
-                        "bg-tertiary border-none rounded-none drop-shadow-lg text-white hover:bg-tertiary/90"
-                      )}
-                    />
-                  </div>
+  <CarouselPrevious
+    className={cn(
+      "pointer-events-auto cursor-pointer",
+      "static left-auto right-auto top-auto translate-y-0",
+      "h-full w-14",
+      "bg-white/50 backdrop-blur-md",
+      "border-none",
+      "rounded-none",
+      "text-white",
+      "shadow-lg",
+      "hover:bg-white/30",
+      "transition-colors"
+    )}
+  />
+  <CarouselNext
+    className={cn(
+      "pointer-events-auto cursor-pointer",
+      "static left-auto right-auto top-auto translate-y-0",
+      "h-full w-14",
+      "bg-white/50 backdrop-blur-md",
+      "border-none",
+      "rounded-none",
+      "text-white",
+      "shadow-lg",
+      "hover:bg-white/30",
+      "transition-colors"
+    )}
+  />
+</div>
+
                 </Section>
               </div>
             </div>

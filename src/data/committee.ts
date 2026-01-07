@@ -5,7 +5,7 @@ export type CommitteeRole =
   | "speakers"
   | "location"
   | "promotion"
-  | "board";
+  | "internal affairs";
 
 export interface CommitteeMember {
   name: string;
@@ -20,7 +20,7 @@ export const ROLE_ORDER: CommitteeRole[] = [
   "speakers",
   "location",
   "promotion",
-  "board",
+  "internal affairs",
 ];
 
 export const committee: CommitteeMember[] = [
@@ -38,5 +38,5 @@ export const committee: CommitteeMember[] = [
 
   { name: "Thom Bongaards", role: "promotion", linkedin: "https://www.linkedin.com/in/thombongaards/" },
   
-  { name: "Joep Swinkels", role: "board", linkedin: "https://www.linkedin.com/in/joep-swinkels/" },
+  { name: "Joep Swinkels", role: "internal affairs", linkedin: "https://www.linkedin.com/in/joep-swinkels/" },
 ];
