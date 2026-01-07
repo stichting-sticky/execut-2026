@@ -18,6 +18,8 @@ import { Callout, Supertitle, Title } from "@/components/ui/typography";
 import { MASTER_TBA } from "@/config/tba";
 import { TBA } from "@/components/ui/tba";
 import { EVENT } from "@/data/event";
+import { PartnersCloud } from "@/components/ui/partners-cloud";
+import Section from "../section";
 
 const AUTOPLAY_MS = 3500;
 const FIRST_DELAY_MS = 1200;
@@ -89,8 +91,7 @@ React.useEffect(() => {
 }, [api, paused]);
 
   return (
-    <section className="w-full flex flex-col bg-gradient-to-tl from-primary/0 from-50% via-primary/35 via-75% to-accent/75 to-100%">
-      <div className="max-w-7xl mx-auto px-6 md:px-0 py-28 md:py-32">
+    <Section className="bg-gradient-to-tl from-primary/0 from-50% via-primary/35 via-75% to-accent/75 to-100%">
         <div className="grid grid-cols-1 md:grid-cols-[1.8fr_1fr] gap-12 items-center">
           {/* Carousel */}
           <div
@@ -111,7 +112,7 @@ React.useEffect(() => {
                   </div>
                 ) : (
                   <>
-                    <CarouselContent className="py-6">
+                    <CarouselContent className="py-6 md:hidden">
                       {partners.map((partner, index) => {
                         const isSelected = index === selected;
 
@@ -119,7 +120,7 @@ React.useEffect(() => {
                           <CarouselItem
                             key={partner.id ?? partner.name ?? index}
                             className={cn(
-                              "pl-12", 
+                              "pl-4", 
                               "basis-[85%] sm:basis-[60%]",
                               "md:basis-[30%]"
                             )}
@@ -155,7 +156,7 @@ React.useEffect(() => {
                     </CarouselContent>
 
                     {/* Controls */}
-                    <div className="mt-6 flex justify-center">
+                    <div className="mt-6 flex justify-center md:hidden">
                       <div
                         className="flex gap-4"
                         onPointerDown={() => setPaused(false)} // allow autoplay to resume after clicking
@@ -168,6 +169,11 @@ React.useEffect(() => {
                 )}
               </Carousel>
             </div>
+
+            {/* Desktop: Cloud */}
+        <div className="hidden md:block">
+          <PartnersCloud partners={partners} />
+        </div>
           </div>
 
           {/* Text */}
@@ -183,7 +189,6 @@ React.useEffect(() => {
             </div>
           </div>
         </div>
-      </div>
-    </section>
+    </Section>
   );
 }

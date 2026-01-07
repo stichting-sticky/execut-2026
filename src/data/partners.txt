@@ -1,9 +1,10 @@
-  {
-    id: 2,
+    {
+    id: 9,
     name: "Organisatie & Personeel Rijk",
     tagline: "The HR service provider for the Dutch central government.",
     image: "/partners/o&prijk.png",
     description: "O&P Rijk is the HR service organization of the Dutch central government. It supports ministries and government agencies with HR services such as recruitment, personnel administration, payroll, and organizational development. O&P Rijk helps civil servants work effectively by providing reliable, standardized, and digital HR solutions.",
+    tier: "gold",
     linkedin: "https://linkedin.com/in/test",
     website: "https://oprijk.nl",
   },

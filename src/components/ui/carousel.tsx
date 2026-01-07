@@ -185,7 +185,7 @@ function CarouselPrevious({
       variant={variant}
       size={size}
       className={cn(
-        "size-12 font-mono font-bold text-2xl",
+        "size-12 font-sans font-bold text-2xl",
         orientation === "horizontal"
           ? ""
           : "",
@@ -215,7 +215,7 @@ function CarouselNext({
       variant={variant}
       size={size}
       className={cn(
-        "size-12 font-mono font-bold text-2xl",
+        "size-12 font-sans font-bold text-2xl",
         orientation === "horizontal"
           ? ""
           : "",

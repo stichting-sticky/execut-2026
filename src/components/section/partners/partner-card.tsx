@@ -6,7 +6,7 @@ import { H2, H3, Paragraph } from "@/components/ui/typography";
 import { Button } from "@/components/ui/button";
 import type { Partner } from "@/data/partners";
 import { GlobeIcon, LinkedinLogoIcon } from "@phosphor-icons/react";
-
+import { TierBadge } from "@/components/ui/tier-badge";
 
 interface PartnerCardProps {
     partner: Partner;
@@ -32,10 +32,18 @@ export function PartnerCard({ partner}: PartnerCardProps) {
                 {/* Partner Info */}
                 <div className="space-y-6">
                     <div>
-                        <H2>{partner.name}</H2>
+                        <H2 className="mb-0">
+                        {partner.name}
+                        {partner.tier && (
+                            <TierBadge
+                            tier={partner.tier}
+                            className="ml-3 relative bottom-[6px]"
+                            />
+                        )}
+                        </H2>
+
                         <H3>{partner.tagline}</H3>
                     </div>
-
                     <Paragraph className="text-lg leading-relaxed">{partner.description}</Paragraph>
 
                     {/* Links */}
