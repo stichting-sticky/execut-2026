@@ -60,21 +60,21 @@ export function Footer() {
           <TinyText>
             Please take note of our{" "}
             <Link
-              href="/code-of-conduct"
+              href="/code-of-conduct.pdf"
               className="underline hover:opacity-70 transition-opacity"
             >
               Code of Conduct
             </Link>
             ,{" "}
             <Link
-              href="/privacy-policy"
+              href="/privacy-policy.pdf"
               className="underline hover:opacity-70 transition-opacity"
             >
               Privacy Policy
             </Link>
             , and{" "}
             <Link
-              href="/general-terms"
+              href="/terms-and-conditions.pdf"
               className="underline hover:opacity-70 transition-opacity"
             >
               General Terms
