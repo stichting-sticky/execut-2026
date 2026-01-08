@@ -35,16 +35,6 @@ export const partners: Partner[] = [
   },
   {
     id: 3,
-    name: "PwC",
-    tagline: "So you can.",
-    image: "/partners/pwc.png",
-    description: "PwC is a leading global professional services network that helps organizations address complex challenges in audit & assurance, tax, legal, advisory, and technology consulting. With deep expertise and a technology-driven approach, PwC supports clients in building trust, solving important problems, and accelerating progress in a rapidly evolving world.",
-    tier: "silver",
-    linkedin: "",
-    website: "https://pwc.nl",
-  },
-  {
-    id: 4,
     name: "Brunel",
     tagline: "Connecting specialists to pioneering projects.",
     image: "/partners/brunel.png",
@@ -54,7 +44,7 @@ export const partners: Partner[] = [
     website: "https://brunel.net",
   },
   {
-    id: 5,
+    id: 4,
     name: "BPM",
     tagline: "Driving digital transformation through process automation.",
     image: "/partners/bpm.png",
@@ -64,7 +54,7 @@ export const partners: Partner[] = [
     website: "https://bpmcompany.eu/",
   },
     {
-    id: 6,
+    id: 5,
     name: "Capgemini",
     tagline: "Get the future you want.",
     image: "/partners/capgemini.png",
@@ -74,7 +64,7 @@ export const partners: Partner[] = [
     website: "https://capgemini.com/",
   },
     {
-    id: 7,
+    id: 6,
     name: "Ministerie van Defensie",
     tagline: "Protecting what we value.",
     image: "/partners/mindef.png",
@@ -84,7 +74,7 @@ export const partners: Partner[] = [
     website: "https://defensie.nl/",
   },
     {
-    id: 8,
+    id: 7,
     name: "Netcompany",
     tagline: "Empowering digital transformation.",
     image: "/partners/netcompany.png",

@@ -1,5 +1,5 @@
     {
-    id: 9,
+    id: ,
     name: "Organisatie & Personeel Rijk",
     tagline: "The HR service provider for the Dutch central government.",
     image: "/partners/o&prijk.png",
@@ -7,4 +7,14 @@
     tier: "gold",
     linkedin: "https://linkedin.com/in/test",
     website: "https://oprijk.nl",
+  },
+    {
+    id: ,
+    name: "PwC",
+    tagline: "So you can.",
+    image: "/partners/pwc.png",
+    description: "PwC is a leading global professional services network that helps organizations address complex challenges in audit & assurance, tax, legal, advisory, and technology consulting. With deep expertise and a technology-driven approach, PwC supports clients in building trust, solving important problems, and accelerating progress in a rapidly evolving world.",
+    tier: "silver",
+    linkedin: "",
+    website: "https://pwc.nl",
   },
