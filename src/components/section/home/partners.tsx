@@ -21,9 +21,6 @@ import { EVENT } from "@/data/event";
 import { PartnersCloud } from "@/components/ui/partners-cloud";
 import Section from "../section";
 
-const AUTOPLAY_MS = 3500;
-const FIRST_DELAY_MS = 1200;
-
 export function HomePartnersSection() {
   const [api, setApi] = React.useState<CarouselApi>();
   const [selected, setSelected] = React.useState(0);
@@ -44,51 +41,6 @@ export function HomePartnersSection() {
       api.off("reInit", update);
     };
   }, [api]);
-
-// Auto-advance with pause + reset on interaction
-React.useEffect(() => {
-  if (!api) return;
-
-  let intervalId: number | null = null;
-  let timeoutId: number | null = null;
-
-  const clear = () => {
-    if (timeoutId !== null) window.clearTimeout(timeoutId);
-    if (intervalId !== null) window.clearInterval(intervalId);
-    timeoutId = null;
-    intervalId = null;
-  };
-
-  const start = () => {
-    clear();
-    if (paused) return;
-
-    // first advance
-    timeoutId = window.setTimeout(() => {
-      api.scrollNext();
-
-      // subsequent advances
-      intervalId = window.setInterval(() => {
-        api.scrollNext();
-      }, AUTOPLAY_MS);
-    }, FIRST_DELAY_MS);
-  };
-
-  start();
-
-  // Only reset on actual user interaction
-  const onPointerDown = () => {
-    // optional: pause while dragging/clicking
-    clear();
-  };
-
-  api.on("pointerDown", onPointerDown);
-
-  return () => {
-    clear();
-    api.off("pointerDown", onPointerDown);
-  };
-}, [api, paused]);
 
   return (
     <Section className="bg-gradient-to-tl from-primary/0 from-50% via-primary/35 via-75% to-accent/75 to-100%">
@@ -159,7 +111,6 @@ React.useEffect(() => {
                     <div className="mt-6 flex justify-center md:hidden">
                       <div
                         className="flex gap-4"
-                        onPointerDown={() => setPaused(false)} // allow autoplay to resume after clicking
                       >
                         <CarouselPrevious />
                         <CarouselNext />
