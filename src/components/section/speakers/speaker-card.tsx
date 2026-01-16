@@ -5,7 +5,7 @@ import Link from "next/link";
 import { H2, H3, Paragraph } from "@/components/ui/typography";
 import { Button } from "@/components/ui/button";
 import type { Speaker } from "@/data/speakers";
-import { GlobeIcon, LinkedinLogoIcon } from "@phosphor-icons/react";
+import { GlobeIcon, LinkedinLogoIcon, VideoIcon } from "@phosphor-icons/react";
 
 interface LogoCube {
     size: number;
@@ -68,6 +68,19 @@ export function SpeakerCard({ speaker, logoCubes = [] }: SpeakerCardProps) {
                                 >
                                     <GlobeIcon className="w-5 h-5" />
                                     Website
+                                </Link>
+                            </Button>
+                        )}
+                        {speaker.talk && (
+                            <Button variant="outline" asChild>
+                                <Link
+                                    href={speaker.talk}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center gap-2"
+                                >
+                                    <VideoIcon className="w-5 h-5" />
+                                    Talk
                                 </Link>
                             </Button>
                         )}
