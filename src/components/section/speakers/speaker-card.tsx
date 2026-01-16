@@ -80,7 +80,7 @@ export function SpeakerCard({ speaker, logoCubes = [] }: SpeakerCardProps) {
                                     className="flex items-center gap-2"
                                 >
                                     <VideoIcon className="w-5 h-5" />
-                                    Talk
+                                    TEDx Talk
                                 </Link>
                             </Button>
                         )}
