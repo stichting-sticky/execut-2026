@@ -6,6 +6,7 @@ export interface Speaker {
   description: string;
   linkedin?: string;
   website?: string;
+  talk?: string;
 }
 
 export const speakers: Speaker[] = [
@@ -43,7 +44,6 @@ export const speakers: Speaker[] = [
     image: "/speakers/Camille de Valk.png",
     description: "Camille is a physicist focused on applying physics to real-world problems. He currently leads research on quantum computing for graphs and optimisation at Capgemini’s Quantum Lab.\n\nAt the Quantum Lab, Camille explores the potential of neutral-atom quantum computers, with a strong focus on optimisation problems such as the Maximum Independent Set (MIS). His work helps accelerate practical applications and near-term quantum advantage.\n\nCamille began his career in econophysics research at a Dutch bank, where he learned the importance of applying academic knowledge in non-academic and corporate environments. Since then, he has developed a strong passion for making complex scientific concepts accessible.\n\nThrough metaphors, small experiments, and interactive demonstrations, Camille explains quantum computing to non-experts. He has spoken at events such as the Quantum Mobility Summit, EuroHPC Summit, and Yale University. His goal is to bring quantum computing closer to the general public.",
     linkedin: "https://www.linkedin.com/in/camilledevalk/?originalSubdomain=nl",
-    website: "",
   },
   {
     id: 5,
@@ -52,7 +52,7 @@ export const speakers: Speaker[] = [
     image: "/speakers/Tanja Vos.png",
     description: "Tanja Vos is Professor of Software Engineering at the Open Universiteit in the Netherlands and at the Universitat Politècnica de València in Spain.\n\nShe has over 25 years of experience in teaching and research, with a strong focus on advancing the field of software testing. Tanja has been involved in numerous research projects on software testing in industrial contexts and has coordinated several EU-funded projects in this area.\n\nThrough her work in Erasmus and Leonardo initiatives, she has actively contributed to strengthening collaboration between academia and industry. Her research and practical experience have led to close cooperation with companies on automated testing in real-world environments.\n\nTanja is the project lead of TESTAR.org, an open-source initiative aimed at developing intelligent tools for automated GUI-level software testing.",
     linkedin: "https://www.linkedin.com/in/tanja-e-j-vos-4812ba/",
-    website: "",
+    talk: "https://youtu.be/CGDNczZmGB0?feature=shared",
   },
   {
     id: 6,
@@ -60,7 +60,6 @@ export const speakers: Speaker[] = [
     specialization: "Founding Engineer at Rootline",
     image: "/speakers/Willem Pino.png",
     description: "Willem is Rootline’s first employee, building backend applications, CI/CD pipelines, and Kubernetes clusters from scratch.\n\nHe previously worked for five years at Adyen in Amsterdam and San Francisco, where he served as an on-call engineer and team lead. In that role, he supported engineers with architecture design, explained core technical foundations to global hires, and led major initiatives such as reducing release time from two days to two hours and transitioning toward a private cloud.\n\nHe studied algorithmic complexity in Utrecht.",
-    linkedin: "Linkedin: https://www.linkedin.com/in/wpino/",
-    website: "",
+    linkedin: "https://www.linkedin.com/in/wpino/",
   },
 ];
