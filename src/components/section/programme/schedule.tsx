@@ -2,9 +2,6 @@ import { H2, H3, Paragraph } from "@/components/ui/typography";
 
 const PROGRAMME_TBA = true;
 
-
-
-
 interface ProgrammeItem {
     time: string;
     duration?: string;

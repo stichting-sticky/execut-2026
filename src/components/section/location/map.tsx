@@ -22,13 +22,17 @@ export function LocationMapSection() {
 			{/* ONE layout: map left, all text right */}
 			<div className="grid grid-cols-1 md:grid-cols-[1.6fr_1fr] gap-8 items-start">
 				{/* LEFT: MAP */}
+				<p id="map-fallback" className="sr-only">
+				Oopsie, Google Maps failed to load.
+				</p>
 				<div className="relative overflow-hidden shadow-lg aspect-[16/10]">
 					<iframe
-						title="Venue map"
-						src={embedSrc}
-						className="absolute inset-0 w-full h-full"
-						loading="lazy"
-						referrerPolicy="no-referrer-when-downgrade"
+					title="Map showing the venue location"
+					aria-describedby="map-fallback"
+					src={embedSrc}
+					className="absolute inset-0 w-full h-full"
+					loading="lazy"
+					referrerPolicy="no-referrer-when-downgrade"
 					/>
 				</div>
 

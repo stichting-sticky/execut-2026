@@ -23,9 +23,14 @@ export const programmeSections: ProgrammeSection[] = [
 		title: "Morning Session",
 		items: [
 			{
-				time: "",
-				duration: "",
-				talk: { title: "Programme is to be decided" },
+				time: "11:00",
+				duration: "20min",
+				talk: { title: "test" },
+			},
+			{
+				time: "11:00",
+				duration: "20min",
+				talk: { title: "test" },
 			},
 		],
 	},
