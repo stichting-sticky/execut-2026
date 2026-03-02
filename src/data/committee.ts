@@ -34,7 +34,7 @@ export const committee: CommitteeMember[] = [
   { name: "Robert Karzijn", role: "speakers", linkedin: "https://www.linkedin.com/in/robert-karzijn-260696279/" },
   { name: "Joshua Oudshoorn", role: "speakers", linkedin: "https://www.linkedin.com/in/joshua-oudshoorn-5a8abb293/" },
 
-  { name: "Tieeny Chao", role: "location", linkedin: "https://www.linkedin.com/in/tieeny-chao-5642b5251/" },
+  { name: "Tieeny Chao", role: "location", linkedin: "https://www.linkedin.com/in/jia-ying-chao-5642b5251/" },
 
   { name: "Thom Bongaards", role: "promotion", linkedin: "https://www.linkedin.com/in/thombongaards/" },
   

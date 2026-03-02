@@ -13,11 +13,11 @@ export function HomeStatsSection() {
                 <Callout className="text-accent">Speakers</Callout>
             </div>
             <div className="flex items-center justify-center flex-col max-w-[90vw]">
-                <H3 className="text-5xl text-secondary">8</H3>
+                <H3 className="text-5xl text-secondary">9</H3>
                 <Callout className="text-secondary">Partners</Callout>
             </div>
             <div className="flex items-center justify-center flex-col max-w-[90vw]">
-                <H3 className="text-5xl text-tertiary">3</H3>
+                <H3 className="text-5xl text-tertiary">2</H3>
                 <Callout className="text-tertiary">Workshops</Callout>
             </div>
         </Section>
