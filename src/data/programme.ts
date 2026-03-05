@@ -116,7 +116,7 @@ export const hostOfDay: ProgrammeHost = {
   host: "Host of exec(ut) 2026",
   image: "/speakers/crystal.jpg",
   description: "Crystal is a digital strategy enthusiast with a passion for intercultural communication.\n\nShe works as Product Lead and Management Consultant for Anderson MacGyver, where she helps organizations utilize technology to achieve their strategic objectives. She enjoys finding the human touch in digital transformations and encourages critical thinking and curiosity\n\nIn 2018, Crystal graduated Utrecht University where she completed the bachelor’s program Information Science and master’s program Business Informatics. Through providing guest lectures and thesis guidance she remains connected to the university to this day. During her studies, she was an active member of Sticky, including a year as Commissioner of Educational Affairs in the board. This year, she will be your host during exec(ut).",
-  linkedin: "www.linkedin.com/in/crystalreijnen",
+  linkedin: "https://www.linkedin.com/in/crystalreijnen/",
   website: "https://www.andersonmacgyver.com/nl/team/crystal-reijnen/",
 };
 
