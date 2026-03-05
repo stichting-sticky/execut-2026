@@ -5,8 +5,8 @@ export const EVENT = {
 
   venue: {
     tba: "Utrecht, venue TBA",
-    real: "Utrecht, Tivoli Vredenburg",
-    short: "Tivoli Vredenburg",
+    real: "Utrecht, TivoliVredenburg",
+    short: "TivoliVredenburg",
   },
 
   tickets: {
