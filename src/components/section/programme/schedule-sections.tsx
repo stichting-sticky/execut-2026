@@ -6,7 +6,7 @@ import { EVENT } from "@/data/event";
 
 export function ProgrammeScheduleSections() {
 	return (
-		<Section className="py-0 md:p-20" id="schedule">
+		<Section className="py-12 md:p-20" id="schedule">
 			<div className="pb-12 md:pb-20 flex items-stretch justify-center md:justify-stretch">
 				<div className="h-full min-h-[120px] md:min-h-[220px] flex items-center justify-center bg-secondary/5 backdrop-blur-sm px-6 py-8 md:px-10 md:py-10">
 					<Callout className="relative inline-block text-left leading-tight">

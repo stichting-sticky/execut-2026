@@ -55,7 +55,7 @@ export function Footer() {
         {/* Bottom Section: Copyright and Legal */}
         <div className="text-center md:text-left space-y-2">
           <TinyText>
-            Copyright 2025 Stichting Sticky. All rights reserved.
+            Copyright 2026 Stichting Sticky. All rights reserved.
           </TinyText>
           <TinyText>
             Please take note of our{" "}
