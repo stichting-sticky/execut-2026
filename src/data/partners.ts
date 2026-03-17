@@ -1,4 +1,4 @@
-export type PartnerTier = "bronze" | "silver" | "gold" | "platinum";
+export type PartnerTier = "introduction" | "bronze" | "silver" | "gold" | "platinum";
 
 export interface Partner {
 	id: number;
@@ -6,7 +6,7 @@ export interface Partner {
 	tagline: string;
 	image: string;
 	description: string;
-	tier?: PartnerTier;   // <- add this
+	tier?: PartnerTier;
 	linkedin?: string;
 	website?: string;
 }
@@ -102,5 +102,15 @@ export const partners: Partner[] = [
     tier: "silver",
     linkedin: "",
     website: "https://jetbrains.com",
+  },
+  {
+    id: 10,
+    name: "Uw Computerstudent",
+    tagline: "Stronger together in a digital world.",
+    image: "/partners/ucs.png",
+    description: "Uw Computerstudent is one of the leading providers of personal IT support in the Netherlands, powered by a nationwide network of talented tech students. We bridge the gap between complex technology and the end user by offering both on-site and remote support for individuals and small businesses. From troubleshooting software issues and optimizing PC performance to securing networks and providing personalized digital training, our students deliver professional solutions with a patient and human approach. As an ICTWaarborg-certified company, we don’t just solve problems, we empower people to take control of their digital world.",
+    tier: "introduction",
+    linkedin: "",
+    website: "https://uwcomputerstudent.nl",
   },
 ];
