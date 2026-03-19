@@ -311,59 +311,59 @@ export function ProgrammeScheduleSection({ title, items }: ProgrammeSectionProps
 
       {/* Popup */}
       {typeof window !== "undefined" &&
-      activePopup &&
-      createPortal(
-        <div
-          className="fixed inset-0 z-[999] bg-black/50 px-4 py-4"
-          onClick={() => setActivePopup(null)}
-        >
+        activePopup &&
+        createPortal(
           <div
-            className="flex h-full items-center justify-center"
-            style={{
-              paddingTop: "var(--header-height)",
-            }}
+            className="fixed inset-0 z-[999] bg-black/50 px-4 py-4"
+            onClick={() => setActivePopup(null)}
           >
             <div
-              className="relative w-full max-w-2xl max-h-[85%] overflow-hidden bg-background shadow-2xl"
-              onClick={(e) => e.stopPropagation()}
+              className="flex h-full items-center justify-center"
+              style={{
+                paddingTop: "var(--header-height)",
+              }}
             >
-              {/* Sticky header */}
-              <div className="sticky top-0 z-10 flex justify-end bg-background/95 backdrop-blur px-2 py-2 border-b border-foreground/10">
-                <button
-                  type="button"
-                  onClick={() => setActivePopup(null)}
-                  aria-label="Close popup"
-                  className="flex h-12 w-12 items-center justify-center text-foreground/70 hover:text-foreground transition"
-                >
-                  <XIcon size={24} weight="bold" />
-                </button>
-              </div>
+              <div
+                className="relative flex w-full max-w-2xl max-h-[85vh] flex-col overflow-hidden bg-background shadow-2xl"
+                onClick={(e) => e.stopPropagation()}
+              >
+                {/* Sticky header */}
+                <div className="sticky top-0 z-10 flex shrink-0 justify-end bg-background/95 backdrop-blur px-2 py-2 border-b border-foreground/10">
+                  <button
+                    type="button"
+                    onClick={() => setActivePopup(null)}
+                    aria-label="Close popup"
+                    className="flex h-12 w-12 items-center justify-center text-foreground/70 hover:text-foreground transition"
+                  >
+                    <XIcon size={24} weight="bold" />
+                  </button>
+                </div>
 
-              {/* Scrollable content */}
-              <div className="overflow-y-auto max-h-[calc(85vh-60px)] px-6 pb-6 md:px-8 md:pb-8 overscroll-contain">
-                <div className="space-y-4 pt-4">
-                  <div className="font-mono text-sm uppercase tracking-wide text-secondary/70">
-                    {activePopup.type}
-                  </div>
+                {/* Scrollable content */}
+                <div className="flex-1 min-h-0 overflow-y-auto overscroll-contain px-6 pb-6 md:px-8 md:pb-8">
+                  <div className="space-y-4 pt-4">
+                    <div className="font-mono text-sm uppercase tracking-wide text-secondary/70">
+                      {activePopup.type}
+                    </div>
 
-                  <H3 className="mb-0">{activePopup.title}</H3>
+                    <H3 className="mb-0">{activePopup.title}</H3>
 
-                  {activePopup.speaker && (
-                    <Paragraph className="text-foreground/70 !mt-0">
-                      {activePopup.speaker}
+                    {activePopup.speaker && (
+                      <Paragraph className="text-foreground/70 !mt-0">
+                        {activePopup.speaker}
+                      </Paragraph>
+                    )}
+
+                    <Paragraph className="whitespace-pre-line">
+                      {activePopup.abstract}
                     </Paragraph>
-                  )}
-
-                  <Paragraph className="whitespace-pre-line">
-                    {activePopup.abstract}
-                  </Paragraph>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>,
-        document.body
-      )}
+          </div>,
+          document.body
+        )}
     </>
   );
 }
