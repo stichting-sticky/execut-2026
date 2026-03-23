@@ -15,7 +15,7 @@ export interface Partner {
 export const partners: Partner[] = [
   {
     id: 1,
-    name: "Chipsoft",
+    name: "ChipSoft",
     tagline: "Together toward better care.",
     image: "/partners/chipsoft.png",
     description: "ChipSoft is a leading Dutch healthcare IT company that develops software used by hospitals, mental healthcare institutions, and other care providers. Their main product, HiX, supports electronic health records and streamlines clinical and administrative processes. ChipSoft works closely with healthcare professionals to improve the quality, safety, and efficiency of care through reliable and innovative IT solutions.",
@@ -45,7 +45,7 @@ export const partners: Partner[] = [
   },
   {
     id: 4,
-    name: "BPM",
+    name: "BPM Company",
     tagline: "Driving digital transformation through process automation.",
     image: "/partners/bpm.png",
     description: "BPM Company is a European specialist in digital process automation and business process management, helping organizations optimize and automate complex workflows using the Pega platform. They provide consulting, implementation, training, and custom solutions that enable clients to become digitally future-proof and more efficient through intelligent software and process innovation.",
@@ -85,7 +85,7 @@ export const partners: Partner[] = [
   },
     {
     id: 8,
-    name: "Yer",
+    name: "YER",
     tagline: "Ambition meets opportunity.",
     image: "/partners/yer.png",
     description: "Yer is an international recruitment and talent development agency that connects ambitious professionals with leading organizations in fields such as IT, engineering, supply chain, and finance. Combining deep market knowledge with a strong personal approach, Yer supports both companies and candidates in realizing long-term growth by matching talent to opportunities where they can truly make an impact.",
