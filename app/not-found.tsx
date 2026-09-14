@@ -2,14 +2,18 @@ import { UtilFooter } from "@/components/section/util/footer";
 import { UtilHeader } from "@/components/section/util/header";
 import { Heading, Text } from "@/components/typography";
 
-import { getConfig } from "@/lib/content";
+import { getConfig, getSiteContent } from "@/lib/content";
 
 export default function NotFound() {
     const config = getConfig();
+    const content = getSiteContent();
 
     return (
         <div className="flex h-screen w-screen flex-col overflow-hidden">
-            <UtilHeader config={config} />
+            <UtilHeader
+                config={config}
+                event={content.event}
+            />
 
             <main className="flex min-h-0 flex-1 items-center bg-primary px-8">
                 <div className="mx-auto w-full max-w-7xl">
@@ -35,7 +39,10 @@ export default function NotFound() {
                             Page Not Found
                         </Heading>
 
-                        <Text variant="callout" className="max-w-xl text-background">
+                        <Text
+                            variant="callout"
+                            className="max-w-xl text-background"
+                        >
                             Oops! The page you're looking for doesn't exist. It might have been moved or deleted.
                         </Text>
                     </div>
